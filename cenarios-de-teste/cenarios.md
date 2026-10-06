@@ -1,6 +1,6 @@
 # Cenários de Teste
 
-> Validar as principais funcionalidades da Verzel Store relacionadas à aplicação de cupons, cálculo de descontos, regras de frete, limite de produtos no carrinho e finalização de pedidos, verificando se o comportamento da aplicação está de acordo com a documentação fornecida.
+Validar as principais funcionalidades da Verzel Store relacionadas à aplicação de cupons, cálculo de descontos, regras de frete, limite de produtos no carrinho e finalização de pedidos, verificando se o comportamento da aplicação está de acordo com a documentação fornecida.
  
 | ID       | Cenário                          | O que será testado                                                             |
 | -------- | -------------------------------- | ------------------------------------------------------------------------------ |
