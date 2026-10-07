@@ -8,8 +8,8 @@ Validar as principais funcionalidades da Verzel Store relacionadas à aplicaçã
 | **CT02** | Variações do cupom               | Testar maiúsculas, minúsculas e espaços antes/depois do código.                |
 | **CT03** | Cupom inexistente                | Verificar mensagem de cupom inválido e ausência de desconto.                   |
 | **CT04** | Cupom expirado                   | Verificar mensagem de cupom expirado e ausência de desconto.                   |
-| **CT05** | Mais de um cupom                 | Verificar se apenas um cupom pode ser aplicado por vez.                        |
-| **CT06** | Remoção do cupom                 | Remover um cupom aplicado e verificar o recálculo dos valores.                 |
+| **CT05** | Remoção do cupom                 | Verificar se a remoção do cupom elimina o desconto e recalcula os valores do carrinho.                        |
+| **CT06** | Alteração do carrinho com cupom                 | Verificar se o desconto é recalculado quando a quantidade de produtos é alterada.                 |
 | **CT07** | Compra abaixo de R$ 200          | Verificar aplicação do frete de R$ 19,90.                                      |
 | **CT08** | Compra de R$ 200                 | Verificar se o valor exato de R$ 200 concede frete grátis.                     |
 | **CT09** | Compra acima de R$ 200           | Verificar se compras acima de R$ 200 possuem frete grátis.                     |
@@ -17,6 +17,6 @@ Validar as principais funcionalidades da Verzel Store relacionadas à aplicaçã
 | **CT11** | Frete + desconto                 | Verificar se o frete grátis considera o subtotal antes do desconto.            |
 | **CT12** | Desconto no frete                | Verificar se o cupom desconta apenas o subtotal dos produtos.                  |
 | **CT13** | Limite de quantidade             | Verificar se até 5 unidades do mesmo produto podem ser adicionadas.            |
-| **CT14** | Exceder limite de quantidade     | Tentar adicionar 6 unidades e verificar se o sistema bloqueia.                 |
+| **CT14** | Limite de quantidade pela API     | Verificar se a API também rejeita uma requisição contendo mais de 5 unidades do mesmo produto.                 |
 | **CT15** | Finalização do pedido            | Realizar um pedido válido e verificar confirmação, valores e número do pedido. |
 
