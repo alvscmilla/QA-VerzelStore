@@ -83,6 +83,7 @@ Isso demonstra uma inconsistência entre a validação da interface e a validaç
 **API:**
 
 ![Evidência BUG-002 - API](./BUG-002-api-quantidade-6.png)
+![Evidência BUG-002 - API](./BUG-002-api.png)
 
 **Interface:**
 
