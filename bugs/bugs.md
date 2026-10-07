@@ -14,7 +14,7 @@ Ao realizar uma compra com subtotal exatamente igual a R$ 200,00 e aplicar um cu
 * Produto: Mochila Urbana 20L (P005)
 * Quantidade: 2 unidades
 * Subtotal: R$ 200,00
-* Cupom: BEMVINDO10
+* Cupom: `BEMVINDO10`
 
 ### Passos para reprodução
 
@@ -25,7 +25,7 @@ Ao realizar uma compra com subtotal exatamente igual a R$ 200,00 e aplicar um cu
 
 ### Resultado esperado
 
-O sistema deve considerar o subtotal **antes do desconto** para determinar o frete. Como o subtotal é R$ 200,00, o frete deveria ser grátis.
+Como o subtotal é R$ 200,00, o sistema deve aplicar frete grátis, pois a regra considera o subtotal antes do desconto.
 
 ### Resultado obtido
 
@@ -35,7 +35,7 @@ O sistema também informa que faltam R$ 0,00 para o frete grátis, mas ainda man
 
 ### Evidência
 
-`BUG-001-frete-200.png`
+![Evidência BUG-001](./BUG-001-frete-200.png)
 
 ---
 
@@ -54,6 +54,7 @@ A interface da loja bloqueia corretamente a sexta unidade, porém a API aceita a
 
 * Endpoint: `POST /api/carrinho/calcular`
 * Produto: Garrafa Térmica 750ml (P008)
+* Quantidade enviada: 6 unidades
 
 ### Passos para reprodução
 
@@ -68,5 +69,21 @@ A API deve rejeitar a quantidade superior a 5 unidades e retornar um erro de val
 
 ### Resultado obtido
 
-A API aceitou 6 unidades e realizou o cálcu
+A API aceitou 6 unidades e realizou o cálculo normalmente:
 
+* Quantidade: 6
+* Preço unitário: R$ 50,00
+* Subtotal: R$ 300,00
+* Total: R$ 300,00
+
+Isso demonstra uma inconsistência entre a validação da interface e a validação da API.
+
+### Evidências
+
+**API:**
+
+![Evidência BUG-002 - API](./BUG-002-api-quantidade-6.png)
+
+**Interface:**
+
+![Evidência BUG-002 - UI](./BUG-002-ui-limite-quantidade.png)
