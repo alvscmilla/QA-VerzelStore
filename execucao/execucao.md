@@ -1,6 +1,6 @@
 # Execução dos Cenários de Teste
-## CT01 — Cupom válido
 
+## CT01 — Cupom válido
 **Objetivo:**
 Verificar se o cupom `BEMVINDO10` é aplicado corretamente e gera desconto de 10% sobre o subtotal dos produtos.
 
