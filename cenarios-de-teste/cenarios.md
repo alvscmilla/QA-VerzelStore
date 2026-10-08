@@ -1,22 +1,21 @@
 # Cenários de Teste
 
 Validar as principais funcionalidades da Verzel Store relacionadas à aplicação de cupons, cálculo de descontos, regras de frete, limite de produtos no carrinho e finalização de pedidos, verificando se o comportamento da aplicação está de acordo com a documentação fornecida.
- 
-| ID       | Cenário                          | O que será testado                                                             |
-| -------- | -------------------------------- | ------------------------------------------------------------------------------ |
-| **CT01** | Cupom válido                     | Aplicar `BEMVINDO10` e verificar o desconto de 10%.                            |
-| **CT02** | Variações do cupom               | Testar maiúsculas, minúsculas e espaços antes/depois do código.                |
-| **CT03** | Cupom inexistente                | Verificar mensagem de cupom inválido e ausência de desconto.                   |
-| **CT04** | Cupom expirado                   | Verificar mensagem de cupom expirado e ausência de desconto.                   |
-| **CT05** | Remoção do cupom                 | Verificar se a remoção do cupom elimina o desconto e recalcula os valores do carrinho.                        |
-| **CT06** | Alteração do carrinho com cupom                 | Verificar se o desconto é recalculado quando a quantidade de produtos é alterada.                 |
-| **CT07** | Compra abaixo de R$ 200          | Verificar aplicação do frete de R$ 19,90.                                      |
-| **CT08** | Compra de R$ 200                 | Verificar se o valor exato de R$ 200 concede frete grátis.                     |
-| **CT09** | Compra acima de R$ 200           | Verificar se compras acima de R$ 200 possuem frete grátis.                     |
-| **CT10** | Valor restante para frete grátis | Verificar o cálculo de quanto falta para atingir R$ 200.                       |
-| **CT11** | Frete + desconto                 | Verificar se o frete grátis considera o subtotal antes do desconto.            |
-| **CT12** | Desconto no frete                | Verificar se o cupom desconta apenas o subtotal dos produtos.                  |
-| **CT13** | Limite de quantidade             | Verificar se até 5 unidades do mesmo produto podem ser adicionadas.            |
-| **CT14** | Limite de quantidade pela API     | Verificar se a API também rejeita uma requisição contendo mais de 5 unidades do mesmo produto.                 |
-| **CT15** | Finalização do pedido            | Realizar um pedido válido e verificar confirmação, valores e número do pedido. |
 
+| ID   | Cenário                          | Prioridade | Execução                                     | Status |
+| ---- | -------------------------------- | ---------- | -------------------------------------------- | ------ |
+| CT01 | Cupom válido                     | Alta       | [Ver execução](../execucao/execucao.md#ct01) | PASSOU |
+| CT02 | Variações do cupom               | Média      | [Ver execução](../execucao/execucao.md#ct02) | PASSOU |
+| CT03 | Cupom inexistente                | Média      | [Ver execução](../execucao/execucao.md#ct03) | PASSOU |
+| CT04 | Cupom expirado                   | Média      | [Ver execução](../execucao/execucao.md#ct04) | PASSOU |
+| CT05 | Remoção do cupom                 | Média      | [Ver execução](../execucao/execucao.md#ct05) | PASSOU |
+| CT06 | Alteração do carrinho com cupom  | Média      | [Ver execução](../execucao/execucao.md#ct06) | PASSOU |
+| CT07 | Compra abaixo de R$ 200          | Alta       | [Ver execução](../execucao/execucao.md#ct07) | PASSOU |
+| CT08 | Compra de R$ 200                 | Alta       | [Ver execução](../execucao/execucao.md#ct08) | FALHOU |
+| CT09 | Compra acima de R$ 200           | Alta       | [Ver execução](../execucao/execucao.md#ct09) | PASSOU |
+| CT10 | Valor restante para frete grátis | Média      | [Ver execução](../execucao/execucao.md#ct10) | PASSOU |
+| CT11 | Frete + desconto                 | Alta       | [Ver execução](../execucao/execucao.md#ct11) | FALHOU |
+| CT12 | Desconto no frete                | Alta       | [Ver execução](../execucao/execucao.md#ct12) | PASSOU |
+| CT13 | Limite de quantidade             | Alta       | [Ver execução](../execucao/execucao.md#ct13) | PASSOU |
+| CT14 | Limite de quantidade pela API    | Alta       | [Ver execução](../execucao/execucao.md#ct14) | FALHOU |
+| CT15 | Finalização do pedido            | Alta       | [Ver execução](../execucao/execucao.md#ct15) | PASSOU |
