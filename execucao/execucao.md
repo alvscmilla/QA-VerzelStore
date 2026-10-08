@@ -1,29 +1,27 @@
 # Execução dos Cenários de Teste
-
 ## CT01 — Cupom válido
 
 **Objetivo:**
-Verificar se o cupom `BEMVINDO10` é aplicado corretamente, gerando 10% de desconto sobre o subtotal dos produtos.
+Verificar se o cupom `BEMVINDO10` é aplicado corretamente e gera desconto de 10% sobre o subtotal dos produtos.
 
 **Dados utilizados:**
 
-* Produto: Garrafa Térmica 750ml
+* Produto: Garrafa Térmica 750ml (P008)
+* Quantidade: 1
 * Cupom: `BEMVINDO10`
 
-**Execução:**
-Foi adicionado o produto ao carrinho e aplicado o cupom `BEMVINDO10`.
+**Execução manual:**
+O produto foi adicionado ao carrinho e o cupom `BEMVINDO10` foi aplicado. O sistema apresentou o desconto de R$ 5,00 sobre o subtotal de R$ 50,00.
 
 **Resultado esperado:**
-O sistema deve aplicar 10% de desconto sobre o subtotal dos produtos.
+Aplicação do cupom com desconto de 10% sobre o subtotal.
 
 **Resultado obtido:**
-O cupom foi aplicado corretamente e o desconto de 10% foi apresentado no carrinho.
+O cupom foi aplicado corretamente, apresentando desconto de R$ 5,00.
 
 **Status:** PASSOU
 
-**Observação:**
-O comportamento está de acordo com o critério CA01.
-
+**Automação:** PASSOU — cenário automatizado com Playwright utilizando Chromium.
 
 
 ## CT02 — Variações do cupom
@@ -57,10 +55,10 @@ Todas as variações previstas na documentação foram aceitas. As versões com 
 
 **Status:** PASSOU
 
+**Automação:** PASSOU — o teste automatizado verificou as variações de maiúsculas, minúsculas e espaços do cupom `BEMVINDO10`.
+
 **Observação:**
 A documentação exige apenas a desconsideração de espaços no início e no final. Não há requisito para aceitar espaços internos, portanto esse comportamento não foi considerado um bug.
-
-
 
 ## CT03 — Cupom inexistente
 
@@ -249,10 +247,10 @@ O sistema reconheceu que faltavam R$ 0,00 para atingir o frete grátis, porém c
 
 **Status:** FALHOU
 
+Automação: FALHOU — o teste automatizado identificou que o frete permaneceu em R$ 19,90 para um subtotal de R$ 200,00, caracterizando o BUG-001.
+
 **Observação:**
-Foi identificado um possível bug: o sistema não aplica frete grátis quando o subtotal é exatamente R$ 200,00. A regra determina que valores **maiores ou iguais a R$ 200,00** devem receber frete grátis.
-
-
+Foi identificado um bug: o sistema não aplica frete grátis quando o subtotal é exatamente R$ 200,00. A regra determina que valores **maiores ou iguais a R$ 200,00** devem receber frete grátis.
 
 ## CT09 — Compra acima de R$ 200
 
